@@ -1,6 +1,11 @@
 <?php
 
 require_once('db.php');
+require_once '../vendor/autoload.php';
+use Ramsey\Uuid\Uuid;
+
+
+$id = Uuid::uuid4()->toString();
 
 $name = filter_input(INPUT_POST, 'name');
 $email = filter_input(INPUT_POST, 'email');
@@ -21,7 +26,9 @@ try {
                 move_uploaded_file($tempFilePath, $destination);
 
                 // Preparar e executar a consulta SQL
-                $sql = $pdo->prepare("INSERT INTO jspdf (name, email, description, image) VALUES (:name, :email, :description, :image)");
+                $sql = $pdo->prepare("INSERT INTO jspdf (id, name, email, description, image)
+                 VALUES (:id, :name, :email, :description, :image)");
+                $sql->bindValue(':id', $id);
                 $sql->bindValue(':name', $name);
                 $sql->bindValue(':email', $email);
                 $sql->bindValue(':description', $description);

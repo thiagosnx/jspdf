@@ -27,8 +27,8 @@
         
         <button type="submit">Save</button>
     </form>
+    <a href="/jspdf/dashboard.php">dashboard</a>
     <div id="show-image">
-        
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
