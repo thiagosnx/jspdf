@@ -27,8 +27,10 @@ try {
                 $sql->bindValue(':description', $description);
                 $sql->bindValue(':image', $destination);
                 $sql->execute();
-
-                header('Location: ../index.php');
+                
+                session_start(); 
+                $_SESSION['msg'] = 'Formulário salvo com sucesso!';
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
                 exit;
             } else {
                 echo "Erro no upload da imagem.";

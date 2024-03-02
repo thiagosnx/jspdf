@@ -1,13 +1,16 @@
-<!DOCTYPE html>
+<?php
+    session_start(); // Inicia a sessão
+        if (isset($_SESSION['msg'])) { // Verifica se existe uma mensagem na sessão
+            echo '<p>' . $_SESSION['msg'] . '</p>';
+            unset($_SESSION['msg']); // Remove a mensagem da sessão para que ela não seja exibida novamente
+        }
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Formulário para PDF</title>
 </head>
 <body>
-    <?php if (!empty($message)): ?>
-        <p><?php echo $message; ?></p>
-    <?php endif; ?>
     <form id="myForm" action="php/create.php" method="POST" enctype="multipart/form-data">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name"><br><br>
