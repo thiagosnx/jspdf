@@ -23,6 +23,8 @@ if($sql->rowCount() > 0){
         <div class="form-item">
             <p class="label">Nome:</p>
             <p class="value"><?= $form['name'] ?></p>
+           
+            <p class="value"></p>
             <a href="getbyid.php?id=<?= $form['id'] ?>">View</a>
         </div>
     <?php endforeach ?>

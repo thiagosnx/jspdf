@@ -26,7 +26,12 @@ if($id){
             <p id="name" class="value"><?= $form['name'] ?></p>
             <p id="email" class="value"><?= $form['email'] ?></p>
             <p id="description" class="value"><?= $form['description'] ?></p>
+            <img src="<?= $form['image'] ?>" alt="">
         </div>
+        <a href="/jspdf/dashboard.php">voltar</a>
+        <br>
+        <a href="/jspdf/index.php">novo</a>
+        <br>
     </div>
     <button type="button" onclick="generatePDF()">Gerar PDF</button>
 
