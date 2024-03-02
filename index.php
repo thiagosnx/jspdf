@@ -11,7 +11,7 @@
     <title>Formulário para PDF</title>
 </head>
 <body>
-    <form id="myForm" action="php/create.php" method="POST" enctype="multipart/form-data">
+    <form id="myForm" action="actions/create.php" method="POST" enctype="multipart/form-data">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name"><br><br>
         
@@ -26,7 +26,6 @@
         <input type="file" id="image" name="image" onchange="convertImage()">
         
         <button type="submit">Save</button>
-        <button type="button" onclick="generatePDF()">Gerar PDF</button>
     </form>
     <div id="show-image">
         

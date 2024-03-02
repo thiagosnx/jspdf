@@ -30,14 +30,14 @@ function convertImage(){
 function generatePDF() {
     const doc = new jsPDF('p', 'pt', 'a4');
     
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const description = document.getElementById('description').value;
+    const name = document.getElementById('name').textContent;
+    const email = document.getElementById('email').textContent;
+    const description = document.getElementById('description').textContent;
+
     
     doc.text(`Nome: ${name}`, 40, 40);
     doc.text(`Email: ${email}`, 40, 60);
     doc.text(`Mensagem: ${description}`, 40, 80);
-    doc.addImage(imageBase64, 100, 100, 100, 100);
     
     doc.save(name + '.pdf');
 }

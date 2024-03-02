@@ -1,0 +1,14 @@
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.form-item {
+    display: flex;
+    margin-right: 10px;
+    padding: .6em;
+    gap: 10px;
+}
+
+
