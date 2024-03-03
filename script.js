@@ -1,3 +1,7 @@
+function abrirJanela() {
+    window.open("https://www.example.com", "NomeDaJanela", "width=600,height=400");
+}
+
 window.jsPDF = window.jspdf.jsPDF;
 
 var imageBase64;
