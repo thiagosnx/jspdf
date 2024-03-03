@@ -11,6 +11,7 @@
     <title>Formulário para PDF</title>
 </head>
 <body>
+<div id="content"></div>
 
 <button onclick="abrirJanela()">Abrir Nova Janela</button>
 <button onclick="scraping()">execute</button>
@@ -33,7 +34,11 @@
     <a href="/jspdf/dashboard.php">dashboard</a>
     <div id="show-image">
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -28,20 +28,7 @@ app.get('/webscraping', async(req, res)=>{
 });
 
 app.listen(PORT, () =>{
-    console.log(`${PORT}`);
+    console.log(`http://localhost:${PORT}`);
 })
 
 
-
-// const url = 'https://wesleiigor.com/';
-
-// axios.get(url)
-//     .then(response => {
-//         const $ = cheerio.load(response.data);
-
-//         const title = $('title').text();
-
-//         console.log(title)
-//     }).catch(error => {
-//         console.log(error);
-//     });
