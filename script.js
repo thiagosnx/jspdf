@@ -69,6 +69,7 @@ function generatePDF() {
     doc.text(`Nome: ${name}`, 40, 40);
     doc.text(`Email: ${email}`, 40, 60);
     doc.text(`Mensagem: ${description}`, 40, 80);
+    // doc.addImage(imageBase64, 20, 20, 50, 50);
     
     doc.save(name + '.pdf');
 }
