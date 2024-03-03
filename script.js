@@ -1,3 +1,19 @@
+const url = 'https://www.example.com';
+
+fetch(url)
+    .then(response => response.text())
+    .then(html =>{
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+
+        const title = doc.querySelector('title').textContent;
+
+        console.log(title);
+        }).catch(error =>{
+            console.log(error)
+        });
+
+
 function abrirJanela() {
     window.open("https://www.example.com", "NomeDaJanela", "width=600,height=400");
 }
