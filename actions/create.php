@@ -22,7 +22,7 @@ try {
                 $tempFilePath = $image['tmp_name'];
 
                 // Move o arquivo para o destino desejado
-                $destination = '../uploads/' . $image['name'];
+                $destination = 'https://localhost/jspdf/uploads/' . $image['name'];
                 move_uploaded_file($tempFilePath, $destination);
 
                 // Preparar e executar a consulta SQL
