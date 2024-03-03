@@ -14,7 +14,7 @@
 //         });
 
 function scraping(){
-    fetch('http://localhost:3000/webscraping') // Atualizado para corresponder à rota no servidor
+    fetch('https://localhost:3000/webscraping') // Atualizado para corresponder à rota no servidor
         .then(response => response.json())
         .then(data => {
             console.log(data)
