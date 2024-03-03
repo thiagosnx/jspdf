@@ -1,17 +1,28 @@
-const url = 'https://www.example.com';
+// const url = 'https://wesleiigor.com/';
 
-fetch(url)
-    .then(response => response.text())
-    .then(html =>{
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
+// fetch(url)
+//     .then(response => response.text())
+//     .then(html =>{
+//         const parser = new DOMParser();
+//         const doc = parser.parseFromString(html, 'text/html');
 
-        const title = doc.querySelector('title').textContent;
+//         const title = doc.querySelector('title').textContent;
 
-        console.log(title);
-        }).catch(error =>{
-            console.log(error)
-        });
+//         console.log(title);
+//         }).catch(error =>{
+//             console.log(error)
+//         });
+
+function scraping(){
+    fetch('http://localhost:3000/webscraping') // Atualizado para corresponder à rota no servidor
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+        })
+        .catch(error => {
+            console.error(error);
+        })
+}
 
 
 function abrirJanela() {

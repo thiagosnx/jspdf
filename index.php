@@ -11,7 +11,9 @@
     <title>Formulário para PDF</title>
 </head>
 <body>
+
 <button onclick="abrirJanela()">Abrir Nova Janela</button>
+<button onclick="scraping()">execute</button>
     <form id="myForm" action="actions/create.php" method="POST" enctype="multipart/form-data">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name"><br><br>
